@@ -112,13 +112,13 @@
       /* display: flex;
       justify-content: center; */
       text-align: center;
-      background-color: white;
+/*       background-color: white; */
      }
      .gh1
      {
      
       text-align: center;
-      background-color: #c7d2de;
+/*       background-color: #c7d2de; */
      }
         #lines
         {
@@ -198,10 +198,10 @@
             background-color: white;
           }
           .gh2{
-            background-color: white;
+/*             background-color: white; */
           }
           .gh3{
-            background-color: #c7d2de ;
+/*             background-color: #c7d2de ; */
           }
           
         }
