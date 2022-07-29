@@ -220,7 +220,7 @@
             console.log("Selected option: ");
             console.log(data);
         }, {
-            placeholder: "Enter an address here"
+            placeholder: "Enter city name here"
         });
 
     
