@@ -8,6 +8,20 @@
 // }
 
 // name_of_city.style.display="none";
+let btt=0;
+let hjk=document.getElementsByClassName("hide");
+  hjk[0].style.display="none";
+  hjk[1].style.display="none";
+  hjk[2].style.display="none";
+function make_vis()
+{
+  let hjk=document.getElementsByClassName("hide");
+  hjk[0].style.display="block";
+  hjk[1].style.display="block";
+  hjk[2].style.display="block";
+  btn45.style.display="none";
+}
+
 
 let city_names = new Array;
 let n_value;
@@ -121,12 +135,13 @@ function getCityNames() {
     
     setTimeout(()=>
     {
+      if(!bt){
       spin.innerHTML="";
       alrt.innerHTML = `
   <div class="alert alert-dark alert-dismissible fade show ok" role="alert">
   Something went wrong. Probably, some of the locations you entered are not valid. Try out again with valid locations.
   <button type="button" class="btn-close ref_but" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>`;
+</div>`;}
     }, 35000) ; 
     
    spin.innerHTML=`<div class="spinner-border" role="status">
@@ -257,6 +272,7 @@ function getCityNames() {
           // output.innerHTML = `${content}`;
           empty.style.display="flex";
           spin.innerHTML="";
+          bt=1;
           alrt.innerHTML = `
   <div class="alert alert-success alert-dismissible fade show ok" role="alert">
  Here is your route! Scroll down to see it. Click reset to try out again!
@@ -296,6 +312,8 @@ function getCityNames() {
             // content += ((city_names[path[path.length - 1] - 1]) );
             prt(city_names[path[path.length - 1] - 1],0);
             empty.style.display="flex";
+            bt=1;
+            spin.innerHTML="";
             alrt.innerHTML = `
             <div class="alert alert-success alert-dismissible fade show ok" role="alert">
             Here is your route!  Scroll down to see it. Click reset to try out again!
@@ -378,7 +396,3 @@ function prt(name, bt)
   if(bt)
   {op.innerHTML+=`<img  src="https://ceoimage.com/wp-content/uploads/2015/09/2048x2048-white-solid-color-background.jpg" alt="" width="1px" height="45px">`;}
 }
-
-
-
-
