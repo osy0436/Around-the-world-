@@ -117,8 +117,8 @@ function getCityNames() {
   city_names.push(textfield1.value);
   (textfield1).value = "";
   if(cnt==0 && e3.options[e3.selectedIndex].value == 1 && n_value!=1) {document.getElementById("edit").innerHTML="Enter all other cities";alert("Now , You can enter names of all other cities in any order and we will arrange them in best possible order for your choices.");}
-  if(cnt==0 && e3.options[e3.selectedIndex].value == 2 && n_value!=1) {document.getElementById("edit").innerHTML="Enter destination city";alert("Now , You can enter destination city");}
-  if(cnt==1 && e3.options[e3.selectedIndex].value == 2 && n_value!=2) {document.getElementById("edit").innerHTML="Enter all other cities";alert("Now , You can enter names of all other cities in any order and we will arrange them in best possible order for your choices.");}
+  if(cnt==0 && e3.options[e3.selectedIndex].value == 2 && n_value!=1) {document.getElementById("edit").innerHTML="Enter city names here";alert("Now , Enter all other cities EXCEPT destination city");}
+  if(cnt==n_value-2 && e3.options[e3.selectedIndex].value == 2 && n_value!=2) {document.getElementById("edit").innerHTML="Enter all other cities";alert("Now , Enter destination city name");}
   //   console.log(city_names);
   cnt++;
   if (cnt == n_value) {
