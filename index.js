@@ -6,8 +6,8 @@
 // </body>`;
 
 // }
-
 // name_of_city.style.display="none";
+
 let btt=0;
 let hjk=document.getElementsByClassName("hide");
   hjk[0].style.display="none";
